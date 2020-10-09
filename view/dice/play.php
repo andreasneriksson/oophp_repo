@@ -29,5 +29,7 @@ namespace Anax\View;
     <p><?= $stop ?></p>
 <?php endif; ?>
 
+<p><?= implode(", ", $game->getHistogramSerie()) ?></p>
+<pre><?= $game->printHistogram() ?></pre>
 
 </main>

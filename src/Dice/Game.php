@@ -9,6 +9,9 @@ namespace Aner\Dice;
  */
 class Game
 {
+
+    use HistogramTrait;
+
     /**
      * @var string $player  Player name.
      * @var array $hand     Array of dice values at hand.
@@ -68,6 +71,7 @@ class Game
             return $this->pcPlayer();
         } else {
             $dice = rand(1, 6);
+            array_push($this->serie, $dice);
             if ($dice == 1) {
                 $this->players[$curr]->resetHand();
                 $this->nextPlayer();
@@ -95,8 +99,15 @@ class Game
     public function pcPlayer()
     {
         $curr = $this->currentPlayer;
-        while ($this->players[$curr]->getHandValue() < 15) {
+        //standard tactic number
+        $staticNum = 15;
+        // if irl player has over 75, pc goes for it!
+        if ($this->players[0] > 75) {
+            $staticNum = 26;
+        }
+        while ($this->players[$curr]->getHandValue() < $staticNum) {
             $dice = rand(1, 6);
+            array_push($this->serie, $dice);
             if ($dice == 1) {
                 $this->players[$curr]->resetHand();
                 $this->nextPlayer();

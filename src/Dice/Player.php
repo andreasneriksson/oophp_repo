@@ -5,8 +5,11 @@ namespace Aner\Dice;
 /**
  * Player to 100 DiceGame
  */
-class Player
+class Player implements HistogramInterface
 {
+
+    use HistogramTrait;
+
     /**
      * @var string $player  Player name.
      * @var array $hand     Array of dice values at hand.
@@ -92,6 +95,17 @@ class Player
     }
 
     /**
+     * Get hand array.
+     *
+     * @return void.
+     */
+    
+    public function getHand()
+    {
+        return $this->hand;
+    }
+
+    /**
      * Set hand as empty array.
      *
      * @return void.
@@ -102,5 +116,6 @@ class Player
         foreach ($this->hand as $value) {
             $this->total += $value;
         }
+        return $this->hand;
     }
 }
