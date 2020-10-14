@@ -30,3 +30,57 @@
 .rm-default ul li {
     background-color: #F7F4E7;
 }
+
+.movie-navbar {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-family: Cambria,Georgia,Times,'Times New Roman',serif;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #FAD2AD;
+}
+
+.movie-navbar a {
+  transition: 0.4s;
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+.movie-navbar a:hover {
+  background-color: #ffffff;
+  color: #EEA200;
+  padding: 24px 10px;
+}
+
+img.thumb {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.movie-table {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.movie-table tr.first {
+    background-color: #ddd;
+}
+
+.movie-table tr:hover {
+    background-color: #eee;
+}
+
+.movie-table th {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.movie-table th,
+.movie-table td {
+    padding: 4px;
+}
