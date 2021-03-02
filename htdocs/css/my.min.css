@@ -84,3 +84,68 @@ img.thumb {
 .movie-table td {
     padding: 4px;
 }
+
+.region-main {
+    width: 90%
+}
+
+.content-cms table {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+.content-cms tr.first {
+    background-color: #ddd;
+}
+
+.content-cms tr:hover {
+    background-color: #eee;
+}
+
+.content-cms th {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-cms th,
+.content-cms td {
+    padding: 4px;
+}
+
+.content-cms img.thumb {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.content-cms a.icons {
+    color: inherit;
+}
+
+.content-cms a:hover.icons {
+    opacity: 0.7;
+}
+
+.content-cms input[type=text],
+.content-cms input[type=datetime],
+.content-cms textarea {
+    width: 400px;
+}
+
+.content-cms textarea {
+    height: 200px;
+}
+
+.content-cms label {
+    font-size: small;
+}
+
+.content-cms input,
+.content-cms textarea,
+.content-cms legend,
+.content-cms button {
+    font-size: large;
+}
+
+.content-cms article {
+    margin-bottom: 24px;
+}

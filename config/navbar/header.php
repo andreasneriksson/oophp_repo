@@ -73,5 +73,10 @@ return [
             "url" => "movie/show",
             "title" => "Filmdatabas",
         ],
+        [
+            "text" => "Content CMS",
+            "url" => "content",
+            "title" => "Content CMS",
+        ],
     ],
 ];
